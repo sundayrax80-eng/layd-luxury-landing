@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { Check, Mail, MapPin, Menu, PackageCheck, Sparkles, Store, X } from 'lucide-react';
 import './styles.css';
 
-const contactEmail = 'contact@laydlux.com'; // Update contact email here if it changes.
+const contactEmail = 'contact@laydluxury.com'; // Update contact email here if it changes.
 const heroImageSrc = '/layd-edge-tamer-hero.png'; // Replace with your updated hero product photo path if needed.
 const productImageSrc = '/layd-edge-tamer.png'; // Replace with your updated product photo path if needed.
 const wholesaleImageSrc = '/layd-edge-tamer-wholesale.png'; // Replace with your updated wholesale shelf photo path if needed.
@@ -46,26 +46,26 @@ const wholesalePacks = [
   {
     name: 'Starter Pack',
     jars: '6 jars',
-    price: '$48',
-    retail: '$89.94',
-    profit: '$41.94',
+    price: '$45',
+    retail: '$77.94',
+    profit: '$32.94',
     cta: 'Start With 6 Jars',
   },
   {
     name: 'Retail Pack',
     jars: '12 jars',
-    price: '$96',
-    retail: '$179.88',
-    profit: '$83.88',
+    price: '$90',
+    retail: '$155.88',
+    profit: '$65.88',
     cta: 'Start With 12 Jars',
     badge: 'Most Popular',
   },
   {
     name: 'Growth Pack',
     jars: '24 jars',
-    price: '$192',
-    retail: '$359.76',
-    profit: '$167.76',
+    price: '$180',
+    retail: '$311.76',
+    profit: '$131.76',
     cta: 'Stock 24 Jars',
   },
 ];
@@ -192,7 +192,7 @@ function ProductOverview() {
     ['Product', "Lay'd Edge Tamer"],
     ['Category', 'Hair Styling / Edge Control'],
     ['Size', '3.5 oz / 100 ml'],
-    ['Suggested Retail', '$14.99'],
+    ['Suggested Retail', '$12.99'],
     ['Location', 'Houston, TX'],
     ['Contact', contactEmail],
   ];
@@ -332,7 +332,7 @@ function Wholesale() {
 
         <div className="wholesale-glass-panel mt-8 rounded-lg border border-copper/45 px-5 py-5 text-center shadow-soft backdrop-blur-xl">
           <p className="text-lg font-black leading-7 text-white">
-            Stores buy at <span className="text-rose">$8.00 per jar</span> and retail at <span className="text-rose">$14.99</span> - estimated profit is <span className="text-hotpink">$6.99 per jar.</span>
+            Stores buy at <span className="text-rose">$7.50 per jar</span> and retail at <span className="text-rose">$12.99</span> - estimated profit is <span className="text-hotpink">$5.49 per jar.</span>
           </p>
         </div>
 
