@@ -422,11 +422,12 @@ function Contact() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/thank-you/"
+          action="/"
           className="grid gap-4 rounded-lg bg-white p-5 shadow-soft sm:grid-cols-2 sm:p-7"
         >
           <input type="hidden" name="form-name" value="wholesale-inquiry" />
-          <p className="hidden">
+
+          <p style={{ display: 'none' }}>
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
