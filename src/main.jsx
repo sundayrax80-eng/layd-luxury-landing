@@ -417,18 +417,30 @@ function Contact() {
           </div>
         </div>
         {/* Connect this form to Formspree, Google Forms, Shopify, or email handling later. */}
-        <form className="grid gap-4 rounded-lg bg-white p-5 shadow-soft sm:grid-cols-2 sm:p-7">
+        <form
+          name="wholesale-inquiry"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="grid gap-4 rounded-lg bg-white p-5 shadow-soft sm:grid-cols-2 sm:p-7"
+        >
+          <input type="hidden" name="form-name" value="wholesale-inquiry" />
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           {fields.map(([label, type]) => (
             <label key={label} className={`block ${label.length > 35 ? 'sm:col-span-2' : ''}`}>
               <span className="form-label">{label}</span>
-              <input className="form-field" type={type} placeholder={label} />
+              <input className="form-field" name={label.toLowerCase().replaceAll(" ", "-")} type={type} placeholder={label} />
             </label>
           ))}
           <label className="block sm:col-span-2">
             <span className="form-label">Message</span>
-            <textarea className="form-field min-h-32 resize-y" placeholder="Tell us what you need for your store or clients." />
+            <textarea name="message" className="form-field min-h-32 resize-y" placeholder="Tell us what you need for your store or clients." />
           </label>
-          <button className="rounded-full bg-hotpink px-6 py-3 text-sm font-black text-white shadow-glow transition hover:bg-ink sm:col-span-2" type="button">
+          <button className="rounded-full bg-hotpink px-6 py-3 text-sm font-black text-white shadow-glow transition hover:bg-ink sm:col-span-2" type="submit">
             Send Inquiry
           </button>
         </form>
