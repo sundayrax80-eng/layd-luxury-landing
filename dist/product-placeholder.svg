@@ -1,0 +1,24 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Lay'd Edge Tamer by Lay'd Luxury Co.</title>
+  <desc id="desc">A placeholder product jar for Lay'd Edge Tamer.</desc>
+  <rect width="720" height="720" rx="32" fill="#FFF6F8"/>
+  <circle cx="360" cy="370" r="250" fill="#F5E8E1"/>
+  <ellipse cx="360" cy="610" rx="185" ry="35" fill="#111013" opacity="0.12"/>
+  <path d="M226 247C226 218.281 249.281 195 278 195H442C470.719 195 494 218.281 494 247V548C494 576.719 470.719 600 442 600H278C249.281 600 226 576.719 226 548V247Z" fill="#111013"/>
+  <path d="M248 270C248 241.281 271.281 218 300 218H420C448.719 218 472 241.281 472 270V525C472 553.719 448.719 577 420 577H300C271.281 577 248 553.719 248 525V270Z" fill="url(#paint0_linear)"/>
+  <path d="M250 270H470V330H250V270Z" fill="#111013"/>
+  <path d="M276 332H444V515C444 534.882 427.882 551 408 551H312C292.118 551 276 534.882 276 515V332Z" fill="#FFF6F8"/>
+  <path d="M279 162C279 144.327 293.327 130 311 130H409C426.673 130 441 144.327 441 162V198H279V162Z" fill="#111013"/>
+  <path d="M300 153H420V198H300V153Z" fill="#B8734B"/>
+  <text x="360" y="394" fill="#111013" font-family="Georgia, serif" font-size="54" font-weight="700" text-anchor="middle">Lay'd</text>
+  <text x="360" y="436" fill="#B8734B" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3" text-anchor="middle">EDGE TAMER</text>
+  <text x="360" y="472" fill="#FF2F92" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Firm Hold Edge Control</text>
+  <text x="360" y="510" fill="#111013" font-family="Arial, sans-serif" font-size="16" font-weight="700" opacity="0.7" text-anchor="middle">3.5 oz / 100 ml</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="248" y1="218" x2="489" y2="555" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9A18A"/>
+      <stop offset="0.52" stop-color="#B8734B"/>
+      <stop offset="1" stop-color="#FF2F92"/>
+    </linearGradient>
+  </defs>
+</svg>
