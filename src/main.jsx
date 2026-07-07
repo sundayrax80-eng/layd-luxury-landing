@@ -395,6 +395,28 @@ function About() {
 }
 
 function Contact() {
+  const [formStatus, setFormStatus] = React.useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      setFormStatus('success');
+      form.reset();
+    } catch (error) {
+      setFormStatus('error');
+    }
+  };
+
   const fields = [
     ['Name', 'text', 'name'],
     ['Business Name', 'text', 'businessName'],
@@ -422,7 +444,7 @@ function Contact() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/"
+          onSubmit={handleSubmit}
           className="grid gap-4 rounded-lg bg-white p-5 shadow-soft sm:grid-cols-2 sm:p-7"
         >
           <input type="hidden" name="form-name" value="wholesale-inquiry" />
@@ -445,6 +467,16 @@ function Contact() {
           <button className="rounded-full bg-hotpink px-6 py-3 text-sm font-black text-white shadow-glow transition hover:bg-ink sm:col-span-2" type="submit">
             Send Inquiry
           </button>
+          {formStatus === 'success' && (
+            <p className="sm:col-span-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700">
+              Your inquiry was sent! We’ll follow up soon about wholesale orders or local reorders.
+            </p>
+          )}
+          {formStatus === 'error' && (
+            <p className="sm:col-span-2 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">
+              Something went wrong. Please email us directly at <a href="mailto:sundayrax80@gmail.com" className="underline">sundayrax80@gmail.com</a>.
+            </p>
+          )}
         </form>
       </div>
     </section>
