@@ -396,13 +396,13 @@ function About() {
 
 function Contact() {
   const fields = [
-    ['Name', 'text'],
-    ['Business Name', 'text'],
-    ['Email', 'email'],
-    ['Phone', 'tel'],
-    ['City/State', 'text'],
-    ['Are you a salon, beauty supply store, stylist, or customer?', 'text'],
-    ['Interested order quantity', 'text'],
+    ['Name', 'text', 'name'],
+    ['Business Name', 'text', 'businessName'],
+    ['Email', 'email', 'email'],
+    ['Phone', 'tel', 'phone'],
+    ['City/State', 'text', 'cityState'],
+    ['Are you a salon, beauty supply store, stylist, or customer?', 'text', 'customerType'],
+    ['Interested order quantity', 'text', 'orderQuantity'],
   ];
 
   return (
@@ -422,6 +422,7 @@ function Contact() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          action="/thank-you/"
           className="grid gap-4 rounded-lg bg-white p-5 shadow-soft sm:grid-cols-2 sm:p-7"
         >
           <input type="hidden" name="form-name" value="wholesale-inquiry" />
@@ -430,10 +431,10 @@ function Contact() {
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
           </p>
-          {fields.map(([label, type]) => (
+          {fields.map(([label, type, name]) => (
             <label key={label} className={`block ${label.length > 35 ? 'sm:col-span-2' : ''}`}>
               <span className="form-label">{label}</span>
-              <input className="form-field" name={label.toLowerCase().replaceAll(" ", "-")} type={type} placeholder={label} />
+              <input className="form-field" name={name} type={type} placeholder={label} />
             </label>
           ))}
           <label className="block sm:col-span-2">
