@@ -467,6 +467,9 @@ function Contact() {
           <button className="rounded-full bg-hotpink px-6 py-3 text-sm font-black text-white shadow-glow transition hover:bg-ink sm:col-span-2" type="submit">
             Send Inquiry
           </button>
+          <p className="sm:col-span-2 text-center text-sm font-medium text-zinc-500">
+            Wholesale inquiries are usually answered within 24–48 hours.
+          </p>
           {formStatus === 'success' && (
             <p className="sm:col-span-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700">
               Your inquiry was sent! We’ll follow up soon about wholesale orders or local reorders.
